@@ -1,0 +1,21 @@
+---
+kind: pipeline
+name: default
+
+steps:
+  - name: build-image-push
+    image: plugins/kaniko
+    settings:
+      registry: <register>
+      repo: <register>/<user>/<image>
+      tags: latest
+      username:
+        from_secret: <regsitry_username>
+      password:
+        from_secret: <registry_password>
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
