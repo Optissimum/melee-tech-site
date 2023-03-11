@@ -1,10 +1,9 @@
 #!/bin/sh
 
-[ -n "${PUID}" ] && usermod -u "${PUID}" mpp
-[ -n "${PGID}" ] && groupmod -g "${PGID}" mpp
+[ -n "${PUID}" ] && usermod -u "${PUID}" zs
+[ -n "${PGID}" ] && groupmod -g "${PGID}" zs
 
-printf "Configuring mpp...\n"
-npx react-inject-env set -d /data
+printf "Configuring zs...\n"
 
 printf "Switching UID=%s and GID=%s\n" "${PUID}" "${PGID}"
-exec su-exec mpp:mpp "$@"
+exec su-exec zs:zs "$@"
