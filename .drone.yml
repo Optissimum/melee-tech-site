@@ -1,21 +1,39 @@
 ---
 kind: pipeline
-name: default
+name: 🐳 Docker
 
 steps:
-  - name: build-image-push
+  - name: 📦 Image
     image: plugins/kaniko
     settings:
-      registry: <register>
-      repo: <register>/<user>/<image>
+      repo: r.mills.io/prologic/zs
       tags: latest
       username:
-        from_secret: <regsitry_username>
+        from_secret: registry_username
       password:
-        from_secret: <registry_password>
+        from_secret: registry_password
+    when:
+      branch:
+        - main
+      event:
+        - push
+
+---
+kind: pipeline
+name: 🥳 Done
+
+steps:
+  - name: 🔔 Notify
+    image: plugins/webhook
+    settings:
+      urls:
+        - https://msgbus.mills.io/ci.mills.io
+
+depends_on:
+  - 🐳 Docker
 
 trigger:
   branch:
-    - master
+    - main
   event:
     - push

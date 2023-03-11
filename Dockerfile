@@ -22,13 +22,28 @@ COPY . .
 RUN make build
 
 # Runtime
-FROM scratch
+FROM alpine AS runtime
 
-WORKDIR /
+RUN apk --no-cache -U add su-exec shadow
+
+ENV PUID=10000
+ENV PGID=10000
+
+RUN addgroup -g "${PGID}" zs && \
+    adduser -D -H -G zs -h /var/empty -u "${PUID}" zs && \
+    mkdir -p /data && chown -R zs:zs /data
+
+EXPOSE 8000
+
 VOLUME /data
 
-COPY --from=build /go/bin/static /static
+WORKDIR /
+
+COPY --from=build /go/bin/static /usr/local/bin/static
 COPY --from=build /src/.pub /data
 
-ENTRYPOINT ["/static"]
-CMD ["-r", "/data"]
+COPY .dockerfiles/entrypoint.sh /init
+
+ENTRYPOINT ["/init"]
+
+CMD ["static", "-n", "-s", "-r", "/data"]

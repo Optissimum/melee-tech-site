@@ -1,9 +1,8 @@
--include environ.inc
-.PHONY: deps dev build install image release test clean
+.PHONY: deps dev build image clean
 
 GOCMD=go
-REGISTRY=<registry>
-IMAGE=<image>
+IMAGE := r.mills.io/prologic/zs
+TAG := latest
 
 all: build
 
@@ -13,18 +12,21 @@ deps:
 
 dev : DEBUG=1
 dev : build
-	@zs watch
+	@bash -c 'trap "jobs -p | xargs kill" EXIT; \
+	          zs watch & \
+	          static -r .pub & \
+	          echo http://localhost:8000/; \
+	          wait'
 
 build:
 	@zs build
 
 ifeq ($(PUBLISH), 1)
 image:
-	@docker build -t $(REGISTRY)/$(IMAGE) .
-	@docker push $(REGISTRY)/$(IMAGE)
+	@docker buildx build --platform linux/amd64,linux/arm64 --push -t $(IMAGE):$(TAG) .
 else
 image:
-	@docker build -t $(REGISTRY)/$(IMAGE) .
+	@docker build  -t $(IMAGE):$(TAG) .
 endif
 
 clean:

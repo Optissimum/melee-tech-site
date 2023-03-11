@@ -8,15 +8,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}" />
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ keywords }}" />
   </head>
   <body>
-    {{ content }}
+    <main>{{ content }}</main>
     <hr />
     <footer>
-      <small>
+      <p>
+        Copyright (c) James Mills  ·
         Last modified <time datetime="{{ date +%Y-%m-%dT%H:%M:%SZ%:z }}">{{ date }}</time> ·
         Built with <a href="https://git.mills.io/prologic/zs">zs
-      </small>
+      </p>
     </footer>
   </body>
 </html>
