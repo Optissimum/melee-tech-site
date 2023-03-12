@@ -7,16 +7,11 @@ TAG := latest
 all: build
 
 deps:
-	@$(GOCMD) install git.mills.io/prologic/zs@latest
-	@$(GOCMD) install git.mills.io/prologic/static@latest
+	@$(GOCMD) install go.mills.io/zs@latest
 
 dev : DEBUG=1
 dev : build
-	@bash -c 'trap "jobs -p | xargs kill" EXIT; \
-	          zs watch & \
-	          static -r .pub & \
-	          echo http://localhost:8000/; \
-	          wait'
+	@zs serve
 
 build:
 	@zs build
