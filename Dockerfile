@@ -12,6 +12,6 @@ COPY . .
 RUN zs build
 
 # Runtime
-FROM prologic/static AS runtime
+FROM prologic/zs AS runtime
 
 COPY --from=build /src/.pub /data
