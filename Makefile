@@ -8,6 +8,7 @@ all: build
 
 deps:
 	@$(GOCMD) install go.mills.io/zs@latest
+	@$(GOCMD) install github.com/tdewolff/minify/v2/cmd/minify@latest
 
 dev : DEBUG=1
 dev : build
