@@ -4,28 +4,23 @@ description: A starter template for the Zen Static (zs) site generator
 keywords: zen, static, zs, starter, template, site, website, template, generator, ssg
 ---
 
-# zs starter template
+This is a [zs](https://git.mills.io/prologic/zs) starter template. A live version of this site can be found [here](https://zs.mills.io).
 
-This is a [zs](https://git.mills.io/prologic/zs) starter template.
+## Features
 
-It includes:
-
-- A basic index page
+- A basic index page with the content you see here
 - A basic layout using [SimpleCSS](https://simplecss.org/) for style
+- Uses [live.js](https://livejs.com/) to automatically reload pages when they change
 
 ## Quick Start
 
 ```console
-git clone https://git.mills.io/prologic/zs.git
-cd zs
+git clone https://git.mills.io/prologic/zs-starter-template.git
+cd zs-starter-template
 make dev
 ```
 
 Open your browser to http://localhost:8000
-
-## Demo
-
-A demo of this starter template can be found here: https://zs.mills.io/
 
 ## License
 

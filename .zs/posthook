@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+minify -o "$ZS_OUTDIR/css/simple.min.css" "$ZS_OUTDIR/css/simple.css"
+rm "$ZS_OUTDIR/css/simple.css"
+
+minify -o "$ZS_OUTDIR/css/style.min.css" "$ZS_OUTDIR/css/style.css"
+rm "$ZS_OUTDIR/css/style.css"
+
+minify -o "$ZS_OUTDIR/js/live.min.js" "$ZS_OUTDIR/js/live.js"
+rm "$ZS_OUTDIR/js/live.js"
