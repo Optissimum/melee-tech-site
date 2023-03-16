@@ -2,9 +2,6 @@
 kind: pipeline
 name: 🐳 Docker
 
-environment:
-  GOPROXY: https://goproxy.mills.io/
-
 steps:
   - name: 📦 Image
     image: plugins/kaniko
