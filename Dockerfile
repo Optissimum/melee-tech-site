@@ -1,17 +1,9 @@
 # Build
-FROM golang:alpine AS build
-
-RUN apk add --no-cache -U build-base git
+FROM prologic/zs AS build
 
 RUN mkdir -p /src
 
 WORKDIR /src
-
-# Copy Makefile
-COPY Makefile ./
-
-# Install deps
-RUN make deps
 
 # Copy content
 COPY . .
