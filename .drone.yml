@@ -8,10 +8,6 @@ steps:
     settings:
       repo: r.mills.io/prologic/zs
       tags: latest
-      username:
-        from_secret: registry_username
-      password:
-        from_secret: registry_password
     when:
       branch:
         - main
