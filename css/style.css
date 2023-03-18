@@ -1,3 +1,5 @@
+/* Icons  */
+
 .icon {
   vertical-align: sub;
   padding-right: 0.25rem;
@@ -9,3 +11,13 @@
   stroke: currentColor;
   fill: currentColor;
 }
+
+/* Anchors */
+a.anchor {
+  text-decoration: none;
+}
+
+/* Fences */
+.blue { background-color: steelblue; padding: 5px; }
+#insideme { color: yellow; }
+.red { background-color: red; }

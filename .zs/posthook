@@ -2,11 +2,15 @@
 
 set -e
 
-minify -o "$ZS_OUTDIR/css/simple.min.css" "$ZS_OUTDIR/css/simple.css"
-rm "$ZS_OUTDIR/css/simple.css"
+CSS="simple style"
+JS="live"
 
-minify -o "$ZS_OUTDIR/css/style.min.css" "$ZS_OUTDIR/css/style.css"
-rm "$ZS_OUTDIR/css/style.css"
+for css in $CSS; do
+  [ -f "$ZS_OUTDIR/css/$css.css" ] && minify -o "$ZS_OUTDIR/css/$css.min.css" "$ZS_OUTDIR/css/$css.css"
+  [ -f "$ZS_OUTDIR/css/$css.css" ]&& rm "$ZS_OUTDIR/css/$css.css"
+done
 
-minify -o "$ZS_OUTDIR/js/live.min.js" "$ZS_OUTDIR/js/live.js"
-rm "$ZS_OUTDIR/js/live.js"
+for js in $JS; do
+  [ -f "$ZS_OUTDIR/js/$js.js" ] && minify -o "$ZS_OUTDIR/js/$js.min.js" "$ZS_OUTDIR/js/$js.js"
+  [ -f "$ZS_OUTDIR/js/$js.js" ] && rm "$ZS_OUTDIR/js/$js.js"
+done
