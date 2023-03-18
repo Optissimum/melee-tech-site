@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -z "$ZS_PRODUCTION" ]; then
+  echo '<script type="application/javascript" src="/js/live.min.js"></script>'
+fi
