@@ -11,6 +11,7 @@ This is a [zs](https://git.mills.io/prologic/zs) starter template. A live versio
 - A basic index page with the content you see here
 - A basic layout using [SimpleCSS](https://simplecss.org/) for style
 - Uses [live.js](https://livejs.com/) to automatically reload pages when they change
+- Examples of several extensions built-in to `zss
 
 ## Quick Start
 
