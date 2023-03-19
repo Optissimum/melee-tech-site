@@ -1,24 +1,14 @@
 #!/bin/sh
 
-set -ex
+set -e
 
 CSS="simple style"
 JS="live"
 
 for css in $CSS; do
-  if [ -f "$ZS_OUTDIR/css/$css.css" ]; then
-    minify -o "$ZS_OUTDIR/css/$css.min.css" "$ZS_OUTDIR/css/$css.css"
-  fi
-  if [ -f "$ZS_OUTDIR/css/$css.css" ]; then
-    rm "$ZS_OUTDIR/css/$css.css"
-  fi
+  minify -o "$ZS_OUTDIR/css/$css.min.css" "$ZS_OUTDIR/css/$css.css"
 done
 
 for js in $JS; do
-  if [ -f "$ZS_OUTDIR/js/$js.js" ]; then
-    minify -o "$ZS_OUTDIR/js/$js.min.js" "$ZS_OUTDIR/js/$js.js"
-  fi
-  if [ -f "$ZS_OUTDIR/js/$js.js" ]; then
-    rm "$ZS_OUTDIR/js/$js.js"
-  fi
+  minify -o "$ZS_OUTDIR/js/$js.min.js" "$ZS_OUTDIR/js/$js.js"
 done

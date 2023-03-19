@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+CSS="simple style"
+
+ext="css"
+if [ -n "$ZS_PRODUCTION" ]; then
+    ext="min.css"
+fi
+
+for css in $CSS; do
+    printf "<link rel=\"stylesheet\" href=\"/css/%s.%s\">\n" "$css" "$ext"
+done

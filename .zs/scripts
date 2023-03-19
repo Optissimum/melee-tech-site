@@ -1,5 +1,19 @@
 #!/bin/sh
 
+set -e
+
+JS=""
+
+# Load live.js for non-production builds for faster development
 if [ -z "$ZS_PRODUCTION" ]; then
-  echo '<script type="application/javascript" src="/js/live.min.js"></script>'
+  JS="$JS live"
 fi
+
+ext="js"
+if [ -n "$ZS_PRODUCTION" ]; then
+  ext="min.js"
+fi
+
+for js in $JS; do
+  printf "<script type=\"application/javascript\" src=\"/js/%s.%s\"></script>\n" "$js" "$ext"
+done
