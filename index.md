@@ -1,8 +1,4 @@
----
-title: zs starter template
-description: A starter template for the Zen Static (zs) site generator
-keywords: zen, static, zs, starter, template, site, website, template, generator, ssg
----
+# zs-starter-template
 
 This is a [zs](https://git.mills.io/prologic/zs) starter template. A live version of this site can be found [here](https://zs.mills.io).
 
