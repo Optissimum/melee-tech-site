@@ -2,7 +2,7 @@
 
 set -e
 
-CSS="simple style"
+CSS="bahunya site"
 JS="live"
 
 for css in $CSS; do
