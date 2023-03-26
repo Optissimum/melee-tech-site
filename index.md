@@ -5,9 +5,9 @@ This is a [zs](https://git.mills.io/prologic/zs) starter template. A live versio
 ## Features
 
 - A basic index page with the content you see here
-- A basic layout using [SimpleCSS](https://simplecss.org/) for style
-- Uses [live.js](https://livejs.com/) to automatically reload pages when they change
-- Examples of several extensions built-in to `zs`
+- A basic layout using a modified version of [bahunya][bahunya] for style
+- [live.js](live.js) for faster development
+- Examples of several built-in extensions
 
 ## Quick Start
 
@@ -26,6 +26,8 @@ Aside from the regular Markdown [[TestPage]] that demonstrates the full capabili
 ### Anchors
 
 With the [anchors][anchors] extension so you can link to any section(s) on the page like [Quick Start](#quick-start).
+
+> 💡 **Tip:** Try hovering over any of the headings on this page!
 
 ### D2 Diagrams
 
@@ -83,3 +85,4 @@ With the [wikilinks][wikilinks] extension you can link to other pages more easil
 [highlighting]: https://github.com/yuin/goldmark-highlighting
 [wikilink]: https://github.com/abhinav/goldmark-wikilink
 [zs]: https://git.mills.io/prologic/zs
+[bahunya]: https://github.com/Kimeiga/bahunya
