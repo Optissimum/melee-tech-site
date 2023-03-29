@@ -74,6 +74,10 @@ func main() {
 
 With the [wikilinks][wikilinks] extension you can link to other pages more easily like [[SandBox]].
 
+### We can even do slides!
+
+- [[TestSlides]]
+
 ## License
 
 `zs-starter-template` is licensed under the terms of the [WTFPL License](/LICENSE)
