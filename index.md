@@ -72,7 +72,7 @@ func main() {
 
 ### Wiki Links
 
-With the [wikilinks][wikilinks] extension you can link to other pages more easily like [[SandBox]].
+With the [wikilink][wikilink] extension you can link to other pages more easily like [[SandBox]].
 
 ### We can even do slides!
 
