@@ -6,6 +6,13 @@ keywords: zen, static, zs, starter, template, site, website, template, generator
 extensions:
   - anchor
   - d2
+  - definitionlist
   - embed
   - fences
+  - linkify
+  - footnote
+  - strikethrough
+  - table
+  - tasklist
+  - typography
   - wikilink

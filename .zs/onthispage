@@ -1,0 +1,7 @@
+#!/bin/sh
+
+{
+    echo "**On this page**"
+    echo
+    toc -a=false -d 2 -s 1 -p "$ZS_FILE"
+} | zs gen

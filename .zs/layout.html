@@ -15,16 +15,17 @@
 </head>
 
 <body>
-  <header>
-    <h1>{{ title }}</h1>
-  </header>
   <nav>
-    <a href="/">Home 🏠</a>
+    <a id="brand" href="/">Home 🏠</a>
     <a href="/TestPage.html">Test Page 🧪</a>
     <a href="https://zs.mills.io/">Demo 🥳</a>
     <a href="https://git.mills.io/prologic/zs">Source 💾</a>
   </nav>
-  <main>{{ content }}</main>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <aside>{{ onthispage }}</aside>
+  <article>{{ content }}</article>
   <footer>
     Copyright &copy; James Mills ·
     Last modified <time datetime="{{ date +%Y-%m-%dT%H:%M:%SZ%:z }}">{{ date }}</time> ·

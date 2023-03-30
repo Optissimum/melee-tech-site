@@ -1,164 +1,626 @@
 ---
-title: zs starter template - Test Page
+title: Markdown Syntax
+description: Basic Markdown Syntax and Test Page
 ---
 
-# Markdown Test Page
+# Overview
 
-# Headings
+Nearly all Markdown applications support the basic syntax outlined in the original Markdown design document. There are minor variations and discrepancies between Markdown processors — those are noted inline wherever possible.
 
-# Heading one
+## Paragraphs
 
-Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem. Ut laborum cillum laboris fugiat culpa sint irure do reprehenderit culpa occaecat. Exercitation esse mollit tempor magna aliqua in occaecat aliquip veniam reprehenderit nisi dolor in laboris dolore velit.
+To create paragraphs, use a blank line to separate one or more lines of text.
 
-## Heading two
+| Markdown                                                     | HTML                                                         | Rendered Output                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `I really like using Markdown.I think I'll use it to format all of my documents from now on.` | `<p>I really like using Markdown.</p><p>I think I'll use it to format all of my documents from now on.</p>` | I really like using Markdown.I think I'll use it to format all of my documents from now on. |
 
-Aute officia nulla deserunt do deserunt cillum velit magna. Officia veniam culpa anim minim dolore labore pariatur voluptate id ad est duis quis velit dolor pariatur enim. Incididunt enim excepteur do veniam consequat culpa do voluptate dolor fugiat ad adipisicing sit. Labore officia est adipisicing dolore proident eiusmod exercitation deserunt ullamco anim do occaecat velit. Elit dolor consectetur proident sunt aliquip est do tempor quis aliqua culpa aute. Duis in tempor exercitation pariatur et adipisicing mollit irure tempor ut enim esse commodo laboris proident. Do excepteur laborum anim esse aliquip eu sit id Lorem incididunt elit irure ea nulla dolor et. Nulla amet fugiat qui minim deserunt enim eu cupidatat aute officia do velit ea reprehenderit.
+### Paragraph Best Practices
 
-### Heading three
+Unless the [paragraph is in a list](https://www.markdownguide.org/basic-syntax/#paragraphs), don’t indent paragraphs with spaces or tabs.
 
-Voluptate cupidatat cillum elit quis ipsum eu voluptate fugiat consectetur enim. Quis ut voluptate culpa ex anim aute consectetur dolore proident voluptate exercitation eiusmod. Esse in do anim magna minim culpa sint. Adipisicing ipsum consectetur proident ullamco magna sit amet aliqua aute fugiat laborum exercitation duis et.
+ **Note:** If you need to indent paragraphs in the output, see the section on how to [indent (tab)](https://www.markdownguide.org/hacks/#indent-tab).
 
-#### Heading four
+| ✅ Do this                                                    | ❌ Don't do this                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `Don't put tabs or spaces in front of your paragraphs.Keep lines left-aligned like this.` | `  This can result in unexpected formatting problems. Don't add tabs or spaces in front of paragraphs.` |
 
-Commodo fugiat aliqua minim quis pariatur mollit id tempor. Non occaecat minim esse enim aliqua adipisicing nostrud duis consequat eu adipisicing qui. Minim aliquip sit excepteur ipsum consequat laborum pariatur excepteur. Veniam fugiat et amet ad elit anim laborum duis mollit occaecat et et ipsum et reprehenderit. Occaecat aliquip dolore adipisicing sint labore occaecat officia fugiat. Quis adipisicing exercitation exercitation eu amet est laboris sunt nostrud ipsum reprehenderit ullamco. Enim sint ut consectetur id anim aute voluptate exercitation mollit dolore magna magna est Lorem. Ut adipisicing adipisicing aliqua ullamco voluptate labore nisi tempor esse magna incididunt.
+## Line Breaks
 
-##### Heading five
+To create a line break or new line (`<br>`), end a line with two or more spaces, and then type return.
 
-Veniam enim esse amet veniam deserunt laboris amet enim consequat. Minim nostrud deserunt cillum consectetur commodo eu enim nostrud ullamco occaecat excepteur. Aliquip et ut est commodo enim dolor amet sint excepteur. Amet ad laboris laborum deserunt sint sunt aliqua commodo ex duis deserunt enim est ex labore ut. Duis incididunt velit adipisicing non incididunt adipisicing adipisicing. Ad irure duis nisi tempor eu dolor fugiat magna et consequat tempor eu ex dolore. Mollit esse nisi qui culpa ut nisi ex proident culpa cupidatat cillum culpa occaecat anim. Ut officia sit ea nisi ea excepteur nostrud ipsum et nulla.
+| Markdown                                                | HTML                                                         | Rendered Output                                      |
+| ------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- |
+| `This is the first line.  And this is the second line.` | `<p>This is the first line.<br>And this is the second line.</p>` | This is the first line. And this is the second line. |
 
-###### Heading six
+### Line Break Best Practices
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+You can use two or more spaces (commonly referred to as “trailing whitespace”) for line breaks in nearly every Markdown application, but it’s controversial. It’s hard to see trailing whitespace in an editor, and many people accidentally or intentionally put two spaces after every sentence. For this reason, you may want to use something other than trailing whitespace for line breaks. If your Markdown application [supports HTML](https://www.markdownguide.org/basic-syntax/#html), you can use the `<br>` HTML tag.
 
+For compatibility, use trailing white space or the `<br>` HTML tag at the end of the line.
 
-[[Top]](#top)
+There are two other options I don’t recommend using. CommonMark and a few other lightweight markup languages let you type a backslash (`\`) at the end of the line, but not all Markdown applications support this, so it isn’t a great option from a compatibility perspective. And at least a couple lightweight markup languages don’t require anything at the end of the line — just type return and they’ll create a line break.
 
-# <a name="Paragraphs"></a>Paragraphs
+| ✅ Do this                                                    | ❌ Don't do this                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `First line with two spaces after.  And the next line.First line with the HTML tag after.<br>And the next line.` | `First line with a backslash after.\And the next line.First line with nothing after.And the next line.` |
 
-Incididunt ex adipisicing ea ullamco consectetur in voluptate proident fugiat tempor deserunt reprehenderit ullamco id dolore laborum. Do laboris laboris minim incididunt qui consectetur exercitation adipisicing dolore et magna consequat magna anim sunt. Officia fugiat Lorem sunt pariatur incididunt Lorem reprehenderit proident irure. Dolore ipsum aliqua mollit ad officia fugiat sit eu aliquip cupidatat ipsum duis laborum laborum fugiat esse. Voluptate anim ex dolore deserunt ea ex eiusmod irure. Occaecat excepteur aliqua exercitation aliquip dolor esse eu eu.
+## Emphasis
 
-Officia dolore laborum aute incididunt commodo nisi velit est est elit et dolore elit exercitation. Enim aliquip magna id ipsum aliquip consectetur ad nulla quis. Incididunt pariatur dolor consectetur cillum enim velit cupidatat laborum quis ex.
+You can add emphasis by making text bold or italic.
 
-Officia irure in non voluptate adipisicing sit amet tempor duis dolore deserunt enim ut. Reprehenderit incididunt in ad anim et deserunt deserunt Lorem laborum quis. Enim aute anim labore proident laboris voluptate elit excepteur in. Ex labore nulla velit officia ullamco Lorem Lorem id do. Dolore ullamco ipsum magna dolor pariatur voluptate ipsum id occaecat ipsum. Dolore tempor quis duis commodo quis quis enim.
+### Bold
 
-[[Top]](#top)
+To bold text, add two asterisks or underscores before and after a word or phrase. To bold the middle of a word for emphasis, add two asterisks without spaces around the letters.
 
-# <a name="Blockquotes"></a>Blockquotes
+| Markdown                     | HTML                                      | Rendered Output            |
+| ---------------------------- | ----------------------------------------- | -------------------------- |
+| `I just love **bold text**.` | `I just love <strong>bold text</strong>.` | I just love **bold text**. |
+| `I just love __bold text__.` | `I just love <strong>bold text</strong>.` | I just love **bold text**. |
+| `Love**is**bold`             | `Love<strong>is</strong>bold`             | Love**is**bold             |
 
-Ad nisi laborum aute cupidatat magna deserunt eu id laboris id. Aliquip nulla cupidatat sint ex Lorem mollit laborum dolor amet est ut esse aute. Nostrud ex consequat id incididunt proident ipsum minim duis aliqua ut ex et ad quis. Laborum sint esse cillum anim nulla cillum consectetur aliqua sit. Nisi excepteur cillum labore amet excepteur commodo enim occaecat consequat ipsum proident exercitation duis id in.
+#### Bold Best Practices
 
-> Ipsum et cupidatat mollit exercitation enim duis sunt irure aliqua reprehenderit mollit. Pariatur Lorem pariatur laboris do culpa do elit irure. Eiusmod amet nulla voluptate velit culpa et aliqua ad reprehenderit sit ut.
+Markdown applications don’t agree on how to handle underscores in the middle of a word. For compatibility, use asterisks to bold the middle of a word for emphasis.
 
-Labore ea magna Lorem consequat aliquip consectetur cillum duis dolore. Et veniam dolor qui incididunt minim amet laboris sit. Dolore ad esse commodo et dolore amet est velit ut nisi ea. Excepteur ea nulla commodo dolore anim dolore adipisicing eiusmod labore id enim esse quis mollit deserunt est. Minim ea culpa voluptate nostrud commodo proident in duis aliquip minim.
+| ✅ Do this        | ❌ Don't do this  |
+| ---------------- | ---------------- |
+| `Love**is**bold` | `Love__is__bold` |
 
-> Qui est sit et reprehenderit aute est esse enim aliqua id aliquip ea anim. Pariatur sint reprehenderit mollit velit voluptate enim consectetur sint enim. Quis exercitation proident elit non id qui culpa dolore esse aliquip consequat.
+### Italic
 
-Ipsum excepteur cupidatat sunt minim ad eiusmod tempor sit.
+To italicize text, add one asterisk or underscore before and after a word or phrase. To italicize the middle of a word for emphasis, add one asterisk without spaces around the letters.
 
-> Deserunt excepteur adipisicing culpa pariatur cillum laboris ullamco nisi fugiat cillum officia. In cupidatat nulla aliquip tempor ad Lorem Lorem quis voluptate officia consectetur pariatur ex in est duis. Mollit id esse est elit exercitation voluptate nostrud nisi laborum magna dolore dolore tempor in est consectetur.
+| Markdown                               | HTML                                          | Rendered Output                      |
+| -------------------------------------- | --------------------------------------------- | ------------------------------------ |
+| `Italicized text is the *cat's meow*.` | `Italicized text is the <em>cat's meow</em>.` | Italicized text is the *cat’s meow*. |
+| `Italicized text is the _cat's meow_.` | `Italicized text is the <em>cat's meow</em>.` | Italicized text is the *cat’s meow*. |
+| `A*cat*meow`                           | `A<em>cat</em>meow`                           | A*cat*meow                           |
 
-Adipisicing voluptate ipsum culpa voluptate id aute laboris labore esse fugiat veniam ullamco occaecat do ut. Tempor et esse reprehenderit veniam proident ipsum irure sit ullamco et labore ea excepteur nulla labore ut. Ex aute minim quis tempor in eu id id irure ea nostrud dolor esse.
+#### Italic Best Practices
 
-[[Top]](#top)
+Markdown applications don’t agree on how to handle underscores in the middle of a word. For compatibility, use asterisks to italicize the middle of a word for emphasis.
 
-# <a name="Lists"></a>Lists
+| ✅ Do this    | ❌ Don't do this |
+| ------------ | --------------- |
+| `A*cat*meow` | `A_cat_meow`    |
 
-### Ordered List
+### Bold and Italic
 
-1. Longan
-2. Lychee
-3. Excepteur ad cupidatat do elit laborum amet cillum reprehenderit consequat quis.
-    Deserunt officia esse aliquip consectetur duis ut labore laborum commodo aliquip aliquip velit pariatur dolore.
-4. Marionberry
-5. Melon
-    - Cantaloupe
-    - Honeydew
-    - Watermelon
-6. Miracle fruit
-7. Mulberry
+To emphasize text with bold and italics at the same time, add three asterisks or underscores before and after a word or phrase. To bold and italicize the middle of a word for emphasis, add three asterisks without spaces around the letters.
 
-### Unordered List
+| Markdown                                  | HTML                                                         | Rendered Output                         |
+| ----------------------------------------- | ------------------------------------------------------------ | --------------------------------------- |
+| `This text is ***really important***.`    | `This text is <em><strong>really important</strong></em>.`   | This text is ***really important***.    |
+| `This text is ___really important___.`    | `This text is <em><strong>really important</strong></em>.`   | This text is ***really important***.    |
+| `This text is __*really important*__.`    | `This text is <em><strong>really important</strong></em>.`   | This text is ***really important***.    |
+| `This text is **_really important_**.`    | `This text is <em><strong>really important</strong></em>.`   | This text is ***really important***.    |
+| `This is really***very***important text.` | `This is really<em><strong>very</strong></em>important text.` | This is really***very***important text. |
 
-- Olive
-- Orange
-    - Blood orange
-    - Clementine
-- Papaya
-- Ut aute ipsum occaecat nisi culpa Lorem id occaecat cupidatat id id magna laboris ad duis. Fugiat cillum dolore veniam nostrud proident sint consectetur eiusmod irure adipisicing.
-- Passionfruit
+ **Note:** The order of the `em` and `strong` tags might be reversed depending on the Markdown processor you're using.
 
-[[Top]](#top)
+#### Bold and Italic Best Practices
 
-# <a name="Horizontal"></a>Horizontal rule
+Markdown applications don’t agree on how to handle underscores in the middle of a word. For compatibility, use asterisks to bold and italicize the middle of a word for emphasis.
 
-In dolore velit aliquip labore mollit minim tempor veniam eu veniam ad in sint aliquip mollit mollit. Ex occaecat non deserunt elit laborum sunt tempor sint consequat culpa culpa qui sit. Irure ad commodo eu voluptate mollit cillum cupidatat veniam proident amet minim reprehenderit.
+| ✅ Do this                                 | ❌ Don't do this                           |
+| ----------------------------------------- | ----------------------------------------- |
+| `This is really***very***important text.` | `This is really___very___important text.` |
 
-***
+## Blockquotes
 
-In laboris eiusmod reprehenderit aliquip sit proident occaecat. Non sit labore anim elit veniam Lorem minim commodo eiusmod irure do minim nisi. Dolor amet cillum excepteur consequat sint non sint.
+To create a blockquote, add a `>` in front of a paragraph.
 
-[[Top]](#top)
-
-# <a name="Table"></a>Table
-
-Duis sunt ut pariatur reprehenderit mollit mollit magna dolore in pariatur nulla commodo sit dolor ad fugiat. Laboris amet ea occaecat duis eu enim exercitation deserunt ea laborum occaecat reprehenderit. Et incididunt dolor commodo consequat mollit nisi proident non pariatur in et incididunt id. Eu ut et Lorem ea ex magna minim ipsum ipsum do.
-
-| Table Heading 1 | Table Heading 2 | Center align    | Right align     | Table Heading 5 |
-| :-------------- | :-------------- | :-------------: | --------------: | :-------------- |
-| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
-| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
-| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
-| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
-| Item 1          | Item 2          | Item 3          | Item 4          | Item 5          |
-
-Minim id consequat adipisicing cupidatat laborum culpa veniam non consectetur et duis pariatur reprehenderit eu ex consectetur. Sunt nisi qui eiusmod ut cillum laborum Lorem officia aliquip laboris ullamco nostrud laboris non irure laboris. Cillum dolore labore Lorem deserunt mollit voluptate esse incididunt ex dolor.
-
-[[Top]](#top)
-
-# <a name="Code"></a>Code
-
-## Inline code
-
-Ad amet irure est magna id mollit Lorem in do duis enim. Excepteur velit nisi magna ea pariatur pariatur ullamco fugiat deserunt sint non sint. Duis duis est `code in text` velit velit aute culpa ex quis pariatur pariatur laborum aute pariatur duis tempor sunt ad. Irure magna voluptate dolore consectetur consectetur irure esse. Anim magna `<strong>in culpa qui officia</strong>` dolor eiusmod esse amet aute cupidatat aliqua do id voluptate cupidatat reprehenderit amet labore deserunt.
-
-## Highlighted
-
-Et fugiat ad nisi amet magna labore do cillum fugiat occaecat cillum Lorem proident. In sint dolor ullamco ad do adipisicing amet id excepteur Lorem aliquip sit irure veniam laborum duis cillum. Aliqua occaecat minim cillum deserunt magna sunt laboris do do irure ea nostrud consequat ut voluptate ex.
-
-```go
-package main
-
-import (
-    "fmt"
-    "net/http"
-)
-
-func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
-}
-
-func main() {
-    http.HandleFunc("/", handler)
-    http.ListenAndServe(":8080", nil)
-}
+```
+> Dorothy followed her through many of the beautiful rooms in her castle.
 ```
 
-Ex amet id ex aliquip id do laborum excepteur exercitation elit sint commodo occaecat nostrud est. Nostrud pariatur esse veniam laborum non sint magna sit laboris minim in id. Aliqua pariatur pariatur excepteur adipisicing irure culpa consequat commodo et ex id ad.
+The rendered output looks like this:
 
-[[Top]](#top)
+> Dorothy followed her through many of the beautiful rooms in her castle.
 
-# <a name="Inline"></a>Inline elements
+### Blockquotes with Multiple Paragraphs
 
-Sint ea anim ipsum ad commodo cupidatat do **exercitation** incididunt et minim ad labore sunt. Minim deserunt labore laboris velit nulla incididunt ipsum nulla. Ullamco ad laborum ea qui et anim in laboris exercitation tempor sit officia laborum reprehenderit culpa velit quis. **Consequat commodo** reprehenderit duis [irure](#!) esse esse exercitation minim enim Lorem dolore duis irure. Nisi Lorem reprehenderit ea amet excepteur dolor excepteur magna labore proident voluptate ipsum. Reprehenderit ex esse deserunt aliqua ea officia mollit Lorem nulla magna enim. Et ad ipsum labore enim ipsum **cupidatat consequat**. Commodo non ea cupidatat magna deserunt dolore ipsum velit nulla elit veniam nulla eiusmod proident officia.
+Blockquotes can contain multiple paragraphs. Add a `>` on the blank lines between the paragraphs.
 
-![Super wide](http://placekitten.com/1280/800)
+```
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+```
 
-*Proident sit veniam in est proident officia adipisicing* ea tempor cillum non cillum velit deserunt. Voluptate laborum incididunt sit consectetur Lorem irure incididunt voluptate nostrud. Commodo ut eiusmod tempor cupidatat esse enim minim ex anim consequat. Mollit sint culpa qui laboris quis consectetur ad sint esse. Amet anim anim minim ullamco et duis non irure. Sit tempor adipisicing ea laboris `culpa ex duis sint` anim aute reprehenderit id eu ea. Aute [excepteur proident](#!) Lorem minim adipisicing nostrud mollit ad ut voluptate do nulla esse occaecat aliqua sint anim.
+The rendered output looks like this:
 
-![Not so big](http://placekitten.com/480/400)
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
 
-Incididunt in culpa cupidatat mollit cillum qui proident sit. In cillum aliquip incididunt voluptate magna amet cupidatat cillum pariatur sint aliqua est _enim **anim** voluptate_. Magna aliquip proident incididunt id duis pariatur eiusmod incididunt commodo culpa dolore sit. Culpa do nostrud elit ad exercitation anim pariatur non minim nisi **adipisicing sunt _officia_**. Do deserunt magna mollit Lorem commodo ipsum do cupidatat mollit enim ut elit veniam ea voluptate.
+### Nested Blockquotes
 
-[![Manny Pacquiao](https://img.youtube.com/vi/s6bCmZmy9aQ/0.jpg)](https://youtu.be/s6bCmZmy9aQ)
+Blockquotes can be nested. Add a `>>` in front of the paragraph you want to nest.
 
-Reprehenderit non eu quis in ad elit esse qui aute id [incididunt](#!) dolore cillum. Esse laboris consequat dolor anim exercitation tempor aliqua deserunt velit magna laboris. Culpa culpa minim duis amet mollit do quis amet commodo nulla irure.
+```
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+>> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+```
+
+The rendered output looks like this:
+
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+> > The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+
+### Blockquotes with Other Elements
+
+Blockquotes can contain other Markdown formatted elements. Not all elements can be used — you’ll need to experiment to see which ones work.
+
+```
+> #### The quarterly results look great!
+>
+> - Revenue was off the chart.
+> - Profits were higher than ever.
+>
+>  *Everything* is going according to **plan**.
+```
+
+The rendered output looks like this:
+
+> #### The quarterly results look great!
+>
+> - Revenue was off the chart.
+> - Profits were higher than ever.
+>
+> *Everything* is going according to **plan**.
+
+### Blockquotes Best Practices
+
+For compatibility, put blank lines before and after blockquotes.
+
+| ✅ Do this                                                    | ❌ Don't do this                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `Try to put a blank line before...> This is a blockquote...and after a blockquote.` | `Without blank lines, this might not look right.> This is a blockquoteDon't do this!` |
+
+## Lists
+
+You can organize items into ordered and unordered lists.
+
+### Ordered Lists
+
+To create an ordered list, add line items with numbers followed by periods. The numbers don’t have to be in numerical order, but the list should start with the number one.
+
+| Markdown                                                     | HTML                                                         | Rendered Output                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `1. First item2. Second item3. Third item4. Fourth item`     | `<ol> <li>First item</li> <li>Second item</li> <li>Third item</li> <li>Fourth item</li></ol>` | First itemSecond itemThird itemFourth item                   |
+| `1. First item1. Second item1. Third item1. Fourth item`     | `<ol> <li>First item</li> <li>Second item</li> <li>Third item</li> <li>Fourth item</li></ol>` | First itemSecond itemThird itemFourth item                   |
+| `1. First item8. Second item3. Third item5. Fourth item`     | `<ol> <li>First item</li> <li>Second item</li> <li>Third item</li> <li>Fourth item</li></ol>` | First itemSecond itemThird itemFourth item                   |
+| `1. First item2. Second item3. Third item  1. Indented item  2. Indented item4. Fourth item` | `<ol> <li>First item</li> <li>Second item</li> <li>Third item  <ol>   <li>Indented item</li>   <li>Indented item</li>  </ol> </li> <li>Fourth item</li></ol>` | First itemSecond itemThird itemIndented itemIndented itemFourth item |
+
+#### Ordered List Best Practices
+
+CommonMark and a few other lightweight markup languages let you use a parenthesis (`)`) as a delimiter (e.g., `1) First item`), but not all Markdown applications support this, so it isn’t a great option from a compatibility perspective. For compatibility, use periods only.
+
+| ✅ Do this                     | ❌ Don't do this               |
+| ----------------------------- | ----------------------------- |
+| `1. First item2. Second item` | `1) First item2) Second item` |
+
+### Unordered Lists
+
+To create an unordered list, add dashes (`-`), asterisks (`*`), or plus signs (`+`) in front of line items. Indent one or more items to create a nested list.
+
+| Markdown                                                     | HTML                                                         | Rendered Output                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `- First item- Second item- Third item- Fourth item`         | `<ul> <li>First item</li> <li>Second item</li> <li>Third item</li> <li>Fourth item</li></ul>` | First itemSecond itemThird itemFourth item                   |
+| `* First item* Second item* Third item* Fourth item`         | `<ul> <li>First item</li> <li>Second item</li> <li>Third item</li> <li>Fourth item</li></ul>` | First itemSecond itemThird itemFourth item                   |
+| `+ First item+ Second item+ Third item+ Fourth item`         | `<ul> <li>First item</li> <li>Second item</li> <li>Third item</li> <li>Fourth item</li></ul>` | First itemSecond itemThird itemFourth item                   |
+| `- First item- Second item- Third item  - Indented item  - Indented item- Fourth item` | `<ul> <li>First item</li> <li>Second item</li> <li>Third item  <ul>   <li>Indented item</li>   <li>Indented item</li>  </ul> </li> <li>Fourth item</li></ul>` | First itemSecond itemThird itemIndented itemIndented itemFourth item |
+
+#### Starting Unordered List Items With Numbers
+
+If you need to start an unordered list item with a number followed by a period, you can use a backslash (`\`) to [escape](https://www.markdownguide.org/basic-syntax/#escaping-characters) the period.
+
+| Markdown                                                | HTML                                                         | Rendered Output                                  |
+| ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------ |
+| `- 1968\. A great year!- I think 1969 was second best.` | `<ul> <li>1968. A great year!</li> <li>I think 1969 was second best.</li></ul>` | 1968. A great year!I think 1969 was second best. |
+
+#### Unordered List Best Practices
+
+Markdown applications don’t agree on how to handle different delimiters in the same list. For compatibility, don’t mix and match delimiters in the same list — pick one and stick with it.
+
+| ✅ Do this                                            | ❌ Don't do this                                      |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| `- First item- Second item- Third item- Fourth item` | `+ First item* Second item- Third item+ Fourth item` |
+
+### Adding Elements in Lists
+
+To add another element in a list while preserving the continuity of the list, indent the element four spaces or one tab, as shown in the following examples.
+
+ **Tip:** If things don't appear the way you expect, double check that you've indented the elements in the list four spaces or one tab.
+
+#### Paragraphs
+
+```
+* This is the first list item.
+* Here's the second list item.
+
+    I need to add another paragraph below the second list item.
+
+* And here's the third list item.
+```
+
+The rendered output looks like this:
+
+- This is the first list item.
+
+- Here’s the second list item.
+
+  I need to add another paragraph below the second list item.
+
+- And here’s the third list item.
+
+#### Blockquotes
+
+```
+* This is the first list item.
+* Here's the second list item.
+
+    > A blockquote would look great below the second list item.
+
+* And here's the third list item.
+```
+
+The rendered output looks like this:
+
+- This is the first list item.
+
+- Here’s the second list item.
+
+  > A blockquote would look great below the second list item.
+
+- And here’s the third list item.
+
+#### Code Blocks
+
+[Code blocks](https://www.markdownguide.org/basic-syntax/#code-blocks) are normally indented four spaces or one tab. When they’re in a list, indent them eight spaces or two tabs.
+
+```
+1. Open the file.
+2. Find the following code block on line 21:
+
+        <html>
+          <head>
+            <title>Test</title>
+          </head>
+
+3. Update the title to match the name of your website.
+```
+
+The rendered output looks like this:
+
+1. Open the file.
+
+2. Find the following code block on line 21:
+
+   ```
+    <html>
+      <head>
+        <title>Test</title>
+      </head>
+   ```
+
+3. Update the title to match the name of your website.
+
+#### Images
+
+```
+1. Open the file containing the Linux mascot.
+2. Marvel at its beauty.
+
+    ![Tux, the Linux mascot](/assets/images/tux.png)
+
+3. Close the file.
+```
+
+The rendered output looks like this:
+
+1. Open the file containing the Linux mascot.
+
+2. Marvel at its beauty.
+
+   ![Tux, the Linux mascot](https://mdg.imgix.net/assets/images/tux.png)
+
+3. Close the file.
+
+#### Lists
+
+You can nest an unordered list in an ordered list, or vice versa.
+
+```
+1. First item
+2. Second item
+3. Third item
+    - Indented item
+    - Indented item
+4. Fourth item
+```
+
+The rendered output looks like this:
+
+1. First item
+2. Second item
+3. Third item
+   - Indented item
+   - Indented item
+4. Fourth item
+
+## Code
+
+To denote a word or phrase as code, enclose it in backticks (```).
+
+| Markdown                              | HTML                                             | Rendered Output                     |
+| ------------------------------------- | ------------------------------------------------ | ----------------------------------- |
+| `At the command prompt, type `nano`.` | `At the command prompt, type <code>nano</code>.` | At the command prompt, type `nano`. |
+
+### Escaping Backticks
+
+If the word or phrase you want to denote as code includes one or more backticks, you can escape it by enclosing the word or phrase in double backticks (````).
+
+| Markdown                                | HTML                                             | Rendered Output                     |
+| --------------------------------------- | ------------------------------------------------ | ----------------------------------- |
+| ```Use `code` in your Markdown file.``` | `<code>Use `code` in your Markdown file.</code>` | `Use `code` in your Markdown file.` |
+
+### Code Blocks
+
+To create code blocks, indent every line of the block by at least four spaces or one tab.
+
+```
+    <html>
+      <head>
+      </head>
+    </html>
+```
+
+The rendered output looks like this:
+
+```
+<html>
+  <head>
+  </head>
+</html>
+```
+
+ **Note:** To create code blocks without indenting lines, use [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks).
+
+## Horizontal Rules
+
+To create a horizontal rule, use three or more asterisks (`***`), dashes (`---`), or underscores (`___`) on a line by themselves.
+
+```
+***
+
+---
+
+_________________
+```
+
+The rendered output of all three looks identical:
+
+------
+
+### Horizontal Rule Best Practices
+
+For compatibility, put blank lines before and after horizontal rules.
+
+| ✅ Do this                                                    | ❌ Don't do this                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `Try to put a blank line before...---...and after a horizontal rule.` | `Without blank lines, this would be a heading.---Don't do this!` |
+
+## Links
+
+To create a link, enclose the link text in brackets (e.g., `[Duck Duck Go]`) and then follow it immediately with the URL in parentheses (e.g., `(https://duckduckgo.com)`).
+
+```
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+```
+
+The rendered output looks like this:
+
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com/).
+
+ **Note:** To link to an element on the same page, see [linking to heading IDs](https://www.markdownguide.org/extended-syntax/#linking-to-heading-ids). To create a link that opens in a new tab or window, see the section on [link targets](https://www.markdownguide.org/hacks/#link-targets).
+
+### Adding Titles
+
+You can optionally add a title for a link. This will appear as a tooltip when the user hovers over the link. To add a title, enclose it in quotation marks after the URL.
+
+```
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best search engine for privacy").
+```
+
+The rendered output looks like this:
+
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com/).
+
+### URLs and Email Addresses
+
+To quickly turn a URL or email address into a link, enclose it in angle brackets.
+
+```
+<https://www.markdownguide.org>
+<fake@example.com>
+```
+
+The rendered output looks like this:
+
+[https://www.markdownguide.org](https://www.markdownguide.org/)
+[fake@example.com](mailto:fake@example.com)
+
+### Formatting Links
+
+To [emphasize](https://www.markdownguide.org/basic-syntax/#emphasis) links, add asterisks before and after the brackets and parentheses. To denote links as [code](https://www.markdownguide.org/basic-syntax/#code), add backticks in the brackets.
+
+```
+I love supporting the **[EFF](https://eff.org)**.
+This is the *[Markdown Guide](https://www.markdownguide.org)*.
+See the section on [`code`](#code).
+```
+
+The rendered output looks like this:
+
+I love supporting the **[EFF](https://eff.org/)**.
+This is the *[Markdown Guide](https://www.markdownguide.org/)*.
+See the section on [`code`](https://www.markdownguide.org/basic-syntax/#code).
+
+### Reference-style Links
+
+Reference-style links are a special kind of link that make URLs easier to display and read in Markdown. Reference-style links are constructed in two parts: the part you keep inline with your text and the part you store somewhere else in the file to keep the text easy to read.
+
+#### Formatting the First Part of the Link
+
+The first part of a reference-style link is formatted with two sets of brackets. The first set of brackets surrounds the text that should appear linked. The second set of brackets displays a label used to point to the link you’re storing elsewhere in your document.
+
+Although not required, you can include a space between the first and second set of brackets. The label in the second set of brackets is not case sensitive and can include letters, numbers, spaces, or punctuation.
+
+This means the following example formats are roughly equivalent for the first part of the link:
+
+- `[hobbit-hole][1]`
+- `[hobbit-hole] [1]`
+
+#### Formatting the Second Part of the Link
+
+The second part of a reference-style link is formatted with the following attributes:
+
+1. The label, in brackets, followed immediately by a colon and at least one space (e.g., `[label]: `).
+2. The URL for the link, which you can optionally enclose in angle brackets.
+3. The optional title for the link, which you can enclose in double quotes, single quotes, or parentheses.
+
+This means the following example formats are all roughly equivalent for the second part of the link:
+
+- `[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle`
+- `[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"`
+- `[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle 'Hobbit lifestyles'`
+- `[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle (Hobbit lifestyles)`
+- `[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"`
+- `[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> 'Hobbit lifestyles'`
+- `[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> (Hobbit lifestyles)`
+
+You can place this second part of the link anywhere in your Markdown document. Some people place them immediately after the paragraph in which they appear while other people place them at the end of the document (like endnotes or footnotes).
+
+#### An Example Putting the Parts Together
+
+Say you add a URL as a [standard URL link](https://www.markdownguide.org/basic-syntax/#links) to a paragraph and it looks like this in Markdown:
+
+```
+In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+eat: it was a [hobbit-hole](https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"), and that means comfort.
+```
+
+Though it may point to interesting additional information, the URL as displayed really doesn’t add much to the existing raw text other than making it harder to read. To fix that, you could format the URL like this instead:
+
+```
+In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+eat: it was a [hobbit-hole][1], and that means comfort.
+
+[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
+```
+
+In both instances above, the rendered output would be identical:
+
+> In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a [hobbit-hole](https://en.wikipedia.org/wiki/Hobbit#Lifestyle), and that means comfort.
+
+and the HTML for the link would be:
+
+```
+<a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="Hobbit lifestyles">hobbit-hole</a>
+```
+
+### Link Best Practices
+
+Markdown applications don’t agree on how to handle spaces in the middle of a URL. For compatibility, try to URL encode any spaces with `%20`. Alternatively, if your Markdown application [supports HTML](https://www.markdownguide.org/basic-syntax/#html), you could use the `a` HTML tag.
+
+| ✅ Do this                                                    | ❌ Don't do this                                 |
+| ------------------------------------------------------------ | ----------------------------------------------- |
+| `[link](https://www.example.com/my%20great%20page)<a href="https://www.example.com/my great page">link</a>` | `[link](https://www.example.com/my great page)` |
+
+## Images
+
+To add an image, add an exclamation mark (`!`), followed by alt text in brackets, and the path or URL to the image asset in parentheses. You can optionally add a title in quotation marks after the path or URL.
+
+```
+![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+```
+
+The rendered output looks like this:
+
+![The San Juan Mountains are beautiful!](https://mdg.imgix.net/assets/images/san-juan-mountains.jpg)
+
+ **Note:** To resize an image, see the section on [image size](https://www.markdownguide.org/hacks/#image-size). To add a caption, see the section on [image captions](https://www.markdownguide.org/hacks/#image-captions).
+
+### Linking Images
+
+To add a link to an image, enclose the Markdown for the image in brackets, and then add the link in parentheses.
+
+```
+[![An old rock in the desert](/assets/images/shiprock.jpg "Shiprock, New Mexico by Beau Rogers")](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)
+```
+
+The rendered output looks like this:
+
+[![An old rock in the desert](https://mdg.imgix.net/assets/images/shiprock.jpg)](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)
+
+## Escaping Characters
+
+To display a literal character that would otherwise be used to format text in a Markdown document, add a backslash (`\`) in front of the character.
+
+```
+\* Without the backslash, this would be a bullet in an unordered list.
+```
+
+The rendered output looks like this:
+
+\* Without the backslash, this would be a bullet in an unordered list.
+
+### Characters You Can Escape
+
+You can use a backslash to escape the following characters.
+
+| Character | Name                                                         |
+| --------- | ------------------------------------------------------------ |
+| \         | backslash                                                    |
+| `         | backtick (see also [escaping backticks in code](https://www.markdownguide.org/basic-syntax/#escaping-backticks)) |
+| *         | asterisk                                                     |
+| _         | underscore                                                   |
+| { }       | curly braces                                                 |
+| [ ]       | brackets                                                     |
+| < >       | angle brackets                                               |
+| ( )       | parentheses                                                  |
+| #         | pound sign                                                   |
+| +         | plus sign                                                    |
+| -         | minus sign (hyphen)                                          |
+| .         | dot                                                          |
+| !         | exclamation mark                                             |
+| \|        | pipe (see also [escaping pipe in tables](https://www.markdownguide.org/extended-syntax/#escaping-pipe-characters-in-tables)) |
+
+## HTML
+
+Many Markdown applications allow you to use HTML tags in Markdown-formatted text. This is helpful if you prefer certain HTML tags to Markdown syntax. For example, some people find it easier to use HTML tags for images. Using HTML is also helpful when you need to change the attributes of an element, like specifying the [color of text](https://www.markdownguide.org/hacks/#color) or changing the width of an image.
+
+To use HTML, place the tags in the text of your Markdown-formatted file.
+
+```
+This **word** is bold. This <em>word</em> is italic.
+```
+
+The rendered output looks like this:
+
+This **word** is bold. This *word* is italic.
+
+### HTML Best Practices
+
+For security reasons, not all Markdown applications support HTML in Markdown documents. When in doubt, check your Markdown application’s documentation. Some applications support only a subset of HTML tags.
+
+Use blank lines to separate block-level HTML elements like `<div>`, `<table>`, `<pre>`, and `<p>` from the surrounding content. Try not to indent the tags with tabs or spaces — that can interfere with the formatting.
+
+You can’t use Markdown syntax inside block-level HTML tags. For example, `<p>italic and **bold**</p>` won’t work.
