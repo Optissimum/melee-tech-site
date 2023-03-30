@@ -15,5 +15,5 @@ if [ -n "$ZS_PRODUCTION" ]; then
 fi
 
 for js in $JS; do
-  printf "<script type=\"application/javascript\" src=\"/js/%s.%s\"></script>\n" "$js" "$ext"
+  printf "<script type=\"application/javascript\" src=\"/assets/js/%s.%s\"></script>\n" "$js" "$ext"
 done

@@ -10,5 +10,5 @@ if [ -n "$ZS_PRODUCTION" ]; then
 fi
 
 for css in $CSS; do
-    printf "<link rel=\"stylesheet\" href=\"/css/%s.%s\">\n" "$css" "$ext"
+    printf "<link rel=\"stylesheet\" href=\"/assets/css/%s.%s\">\n" "$css" "$ext"
 done

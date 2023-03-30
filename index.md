@@ -76,8 +76,7 @@ With the [wikilink][wikilink] extension you can link to other pages more easily 
 
 ### We can even do slides!
 
-- [[SlideExample]]
-- [[TestSlides]]
+{{ list slides }}
 
 ## License
 
