@@ -2,13 +2,16 @@
 
 set -e
 
-CSS="bahunya site"
-JS="live"
+minify_assets() {
+  p="$1"
+  t="$2"
 
-for css in $CSS; do
-  minify -o "$ZS_OUTDIR/css/$css.min.css" "$ZS_OUTDIR/css/$css.css"
-done
+  find "$p" -type f -name "*.$t" | while read -r file; do
+    name="${file#"$p"}"
+    name="${name#"/"}"
+    minify -o "${p}/${name}" "$file"
+  done
+}
 
-for js in $JS; do
-  minify -o "$ZS_OUTDIR/js/$js.min.js" "$ZS_OUTDIR/js/$js.js"
-done
+minify_assets "$ZS_OUTDIR" "css"
+minify_assets "$ZS_OUTDIR" "js"
