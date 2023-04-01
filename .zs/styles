@@ -4,11 +4,6 @@ set -e
 
 CSS="bahunya highlight site"
 
-ext="css"
-if [ -n "$ZS_PRODUCTION" ]; then
-    ext="min.css"
-fi
-
 for css in $CSS; do
-    printf "<link rel=\"stylesheet\" href=\"/assets/css/%s.%s\">\n" "$css" "$ext"
+    printf "<link rel=\"stylesheet\" href=\"/assets/css/%s.css\">\n" "$css"
 done
