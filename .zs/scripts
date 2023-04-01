@@ -2,7 +2,7 @@
 
 set -e
 
-JS="highlight"
+JS="highlight umbrella"
 
 # Load live.js for non-production builds for faster development
 if [ -z "$ZS_PRODUCTION" ]; then

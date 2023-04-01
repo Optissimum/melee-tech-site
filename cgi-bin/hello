@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Set content-type to text/plain
+echo "Content-type: text/plain"
+echo ""
+
+# read JSON from request body (stdin) and store in a tempoary file (fd)
+tmpfile="$(mktemp /tmp/req.XXXXXX)"
+trap 'rm -f -- "$tmpfile"' INT TERM HUP EXIT
+cat >"$tmpfile"
+
+# Extract fname and lname fields from JSON
+firstName="$(jq -r '.fname' <"$tmpfile")"
+lastName="$(jq -r '.lname' <"$tmpfile")"
+
+# Send a response
+printf "Hello %s %s !" "$firstName" "$lastName"

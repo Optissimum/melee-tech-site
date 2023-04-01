@@ -78,6 +78,10 @@ With the [wikilink][wikilink] extension you can link to other pages more easily 
 
 {{ list slides }}
 
+### Remember cgi scripts?
+
+- [[TestCGI]]
+
 ## License
 
 `zs-starter-template` is licensed under the terms of the [WTFPL License](/LICENSE)
