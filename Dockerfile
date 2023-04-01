@@ -8,8 +8,8 @@ WORKDIR /src
 # Copy content
 COPY . .
 
-# Build the site
-RUN zs build
+# Build the site (in production mode)
+RUN zs -p build
 
 # Runtime
 FROM prologic/zs AS runtime
