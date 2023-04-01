@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/bin/bash
+
+set -eo pipefail
 
 {
     echo "**On this page**"
     echo
-    toc -a=false -d 2 -s 1 -p "$ZS_FILE"
+    toc -d 2 -s 1 "$ZS_FILE"
 } | zs gen
