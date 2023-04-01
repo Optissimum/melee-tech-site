@@ -81,6 +81,7 @@ With the [wikilink][wikilink] extension you can link to other pages more easily 
 ### Remember cgi scripts?
 
 - [[TestCGI]]
+- [Guest Book](./guestbook)
 
 ## License
 
