@@ -32,7 +32,10 @@
     Last modified <time datetime="{{ date +%Y-%m-%dT%H:%M:%SZ%:z }}">{{ date }}</time> ·
     Built with <a href="https://git.mills.io/prologic/zs">zs</a>
   </footer>
+  {{ scripts }}
+  <script>
+    hljs.highlightAll();
+  </script>
 </body>
-{{ scripts }}
 
 </html>

@@ -2,7 +2,7 @@
 
 set -e
 
-CSS="bahunya site"
+CSS="bahunya highlight site"
 
 ext="css"
 if [ -n "$ZS_PRODUCTION" ]; then
