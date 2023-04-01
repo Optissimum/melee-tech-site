@@ -1,0 +1,7 @@
+#!/bin/sh
+
+GITEA_BASE_URL="https://git.mills.io/prologic/zs-starter-template/_edit/main/index.md"
+
+url="${GITEA_BASE_URL}/${ZS_FILE}"
+
+printf "<a href=\"%s\">✍️ Edit this page on Gitea.</a>" "$url"
