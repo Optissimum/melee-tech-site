@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {{ styles }}
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <title>{{ title }}</title>
@@ -22,16 +22,54 @@
     <a href="https://git.mills.io/prologic/zs">Source 💾</a>
   </nav>
   <header>
-    <h1>{{ title }}</h1>
+    <h1>{{ title }} <a class="edit" href="" #edit"></a></h1>
   </header>
-  <aside>{{ onthispage }}</aside>
   <article>{{ content }}</article>
+  <div id="editor"></div>
   <footer>
     Copyright &copy; James Mills ·
     Last modified <time datetime="{{ date +%Y-%m-%dT%H:%M:%SZ%:z }}">{{ date }}</time> ·
     Built with <a href="https://git.mills.io/prologic/zs">zs</a>
   </footer>
+  {{ scripts }}
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function (event) {
+      console.log("dom loaded");
+
+      const {
+        Editor
+      } = toastui;
+      const {
+        colorSyntax
+      } = Editor.plugin;
+
+      const {
+        codeSyntaxHighlight
+      } = Editor.plugin;
+
+      const colorSyntaxOptions = {
+        preset: ['#181818', '#292929', '#393939']
+      };
+
+      u("a.edit").on("click", function (e) {
+        e.preventDefault();
+        console.log("edit clicked");
+        u("article").addClass("hidden");
+        const editor = new toastui.Editor({
+          el: document.querySelector('#editor'),
+          theme: 'dark',
+          initialValue: '{{ source }}',
+          initialEditType: 'wysiwyg',
+          plugins: [
+            codeSyntaxHighlight,
+            [colorSyntax, colorSyntaxOptions]
+          ],
+          usageStatistics: false,
+        });
+        window.editor = editor;
+      });
+    });
+  </script>
 </body>
-{{ scripts }}
 
 </html>

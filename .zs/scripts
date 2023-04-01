@@ -2,18 +2,16 @@
 
 set -e
 
-JS=""
+JS="toastui umbrella"
+JS="$JS tui-color-picker"
+JS="$JS toastui-editor-plugin-color-syntax"
+JS="$JS toastui-editor-plugin-code-syntax-highlight"
 
 # Load live.js for non-production builds for faster development
 if [ -z "$ZS_PRODUCTION" ]; then
   JS="$JS live"
 fi
 
-ext="js"
-if [ -n "$ZS_PRODUCTION" ]; then
-  ext="min.js"
-fi
-
 for js in $JS; do
-  printf "<script type=\"application/javascript\" src=\"/assets/js/%s.%s\"></script>\n" "$js" "$ext"
+  printf "<script type=\"application/javascript\" src=\"/assets/js/%s.js\"></script>\n" "$js"
 done

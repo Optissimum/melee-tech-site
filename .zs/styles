@@ -3,12 +3,10 @@
 set -e
 
 CSS="bahunya site"
-
-ext="css"
-if [ -n "$ZS_PRODUCTION" ]; then
-    ext="min.css"
-fi
+CSS="$CSS toastui toastui-dark"
+CSS="$CSS tui-color-picker toastui-editor-plugin-color-syntax"
+CSS="$CSS prism toastui-editor-plugin-code-syntax-highlight"
 
 for css in $CSS; do
-    printf "<link rel=\"stylesheet\" href=\"/assets/css/%s.%s\">\n" "$css" "$ext"
+    printf "<link rel=\"stylesheet\" href=\"/assets/css/%s.css\">\n" "$css"
 done
