@@ -78,6 +78,10 @@ With the [wikilink][wikilink] extension you can link to other pages more easily 
 
 {{ list slides }}
 
+### And Kanban Boards!
+
+- [[TODO]]
+
 ### Remember cgi scripts?
 
 - [[TestCGI]]
